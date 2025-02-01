@@ -1,9 +1,8 @@
 {
-  "index": "Introduction",
-  "another": "Another Page",
-  "advanced": "Advanced (A Folder)",
+  "index": "Introdução",
+  "changelog": "Changelog",
   "about": {
-    "title": "About",
+    "title": "Sobre",
     "type": "page"
   },
   "contact": {
