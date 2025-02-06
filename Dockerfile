@@ -18,13 +18,13 @@ RUN pnpm install
 COPY . .
 
 # Crie o build do Next.js
-RUN pnpm run build
+RUN pnpm run export
 
 # Etapa 2: Produção
 FROM nginx:alpine
 
 # Copie o build do Next.js para o Nginx
-COPY --from=build /app/.next /usr/share/nginx/html
+COPY --from=build /app/out /usr/share/nginx/html
 
 # Copie o arquivo de configuração do Nginx
 COPY nginx.conf /etc/nginx/nginx.conf
